@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 926125565}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -241,6 +241,7 @@ MonoBehaviour:
   _speed: 3.5
   _laserPrefab: {fileID: 1487762401965518106, guid: 403a93b86c4f028439a209d72fd5fba9, type: 3}
   _fireRate: 0.5
+  _lives: 3
 --- !u!65 &926125566
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -311,7 +312,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926125564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.21, y: 0, z: 0}
+  m_LocalPosition: {x: -1.29, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
