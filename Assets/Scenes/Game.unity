@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 4456758966696092080, guid: bb50a78bf9bfb8a46ad39a3db9058cfa, type: 3}
+  _tripleShotPowerupPrefab: {fileID: 7347951909166503736, guid: 6bb31fa2532efb64f93911d2207d712d, type: 3}
   _enemyContainer: {fileID: 2093143781}
 --- !u!4 &17196295
 Transform:
@@ -203,6 +204,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 3.5
   _laserPrefab: {fileID: 2124221475889143940, guid: 403a93b86c4f028439a209d72fd5fba9, type: 3}
+  _tripleshotPrefab: {fileID: 536155427460058188, guid: 9db1bf2430a55f345a482a93d487fd29, type: 3}
+  _isTripleShotActive: 0
   _fireRate: 0.15
   _lives: 3
 --- !u!212 &146135308
@@ -264,7 +267,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146135306}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -2.42, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
