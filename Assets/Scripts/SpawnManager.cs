@@ -14,22 +14,28 @@ public class SpawnManager : MonoBehaviour
     private bool _stopSpawning = false;
     void Start()
     {
-        StartCoroutine(SpawnEnemyRoutine());
-        StartCoroutine(SpawnPowerupRoutine());
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     //spawn game objects every 5 seconds
     //crreate a coroutine of type IEnumerator -- Yield Events
     //while loop
 
-    IEnumerator SpawnEnemyRoutine ()
+    public void StartSpawning()
     {
-        //while loop (infinite loop)
+        StartCoroutine(SpawnEnemyRoutine());
+        StartCoroutine(SpawnPowerupRoutine());
+    }
+
+
+    IEnumerator SpawnEnemyRoutine()
+    {
+        yield return new WaitForSeconds(3.0f);
         while (_stopSpawning == false)
         {
             Vector3 posToSpawn = new Vector3(Random.Range(-8f, 8f), 7, 0);
@@ -43,7 +49,7 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator SpawnPowerupRoutine()
     {
-        //every 3-7 seconds, spawn in powerup
+        yield return new WaitForSeconds(3.0f);
         while (_stopSpawning == false)
         {
             Vector3 placeToSpawn = new Vector3(Random.Range(-8f,8f),7,0);

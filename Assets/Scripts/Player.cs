@@ -17,7 +17,10 @@ public class Player : MonoBehaviour
     private bool _isSpeedBoostActive = false;
     private bool _isShieldActive = false;
     [SerializeField]
-    private GameObject _shieldVisual; 
+    private GameObject _shieldVisual;
+    [SerializeField]
+    private GameObject _rightEngine, _leftEngine;
+
 
     [SerializeField]
     private float _fireRate = 0.5f;
@@ -112,6 +115,14 @@ public class Player : MonoBehaviour
 
         _lives -=1;
         _uiManager.UpdateLives(_lives);
+        if (_lives == 2)
+        {
+            _rightEngine.SetActive(true);
+        }
+        if (_lives == 1)
+        {
+            _leftEngine.SetActive(true);
+        }
         if (_lives < 1)
         {
             _spawnManager.OnPlayerDeath();            
